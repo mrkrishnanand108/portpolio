@@ -8,6 +8,7 @@ body {
 .container {
   width: 80%;
   margin: 0 auto;
+ 
 }
 
 header {
@@ -25,11 +26,13 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
+  
 }
 
 nav a {
   text-decoration: none;
   color: #ffffff;
+  
 }
 nav :hover{ color: blue;}
 
@@ -81,4 +84,70 @@ button {
   background-position: right;
   clip-path: circle(50%)
  
+}
+div body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #001f3f;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.logos {
+  display: flex;
+  gap: 20px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Facebook Logo */
+.facebook {
+  background-color: #4267B2;
+}
+
+/* Instagram Logo */
+.instagram {
+  background: radial-gradient(circle at 30% 30%, #fdf497, #fdf497, #fd5949, #d6249f, #285AEB);
+}
+
+/* Twitter Logo */
+.twitter {
+  background-color: #1DA1F2;
+}
+
+div.logo:hover {
+  opacity: 0.8;
+}
+div.under {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+div.under button {
+  background-color: #00ff7f;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.under .under:hover {
+  background-color: #00cc66;
 }
