@@ -1,159 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #000000;
-      color: #ffffff;
-    }
-    
-    .container {
-      display: flex;
-      height: 100vh;
-    }
-    
-    .sidebar {
-      background-color: #00ff7f;
-      width: 25%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .sidebar h1 {
-      font-size: 24px;
-      margin: 0;
-    }
-    
-    .main-content {
-      width: 75%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-    
-    .image-container img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 10px;
-    }
-    
-    .text-content {
-      text-align: center;
-      margin-top: 20px;
-    }
-    
-    .text-content h2 {
-      color: #00ff7f;
-      font-size: 18px;
-      margin: 0;
-    }
-    
-    .text-content h1 {
-      font-size: 48px;
-      margin: 10px 0;
-    }
-    
-    .text-content p {
-      font-size: 16px;
-      margin: 20px 0;
-    }
-    
-    .buttons {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-    }
-    
-    .buttons button {
-      background-color: #00ff7f;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    
-    .buttons button:hover {
-      background-color: #00cc66;
-    }
-    .containera {
-  width: 100%;
-  margin: 0 auto;
- 
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>हमारी सेवाएं | Cyber Xpert Portfolio</title>
+    <style>
+        /* वैश्विक शैलियाँ (Global Styles) */
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #0f172a; 
+            color: #e2e8f0; 
+            line-height: 1.6; 
+            margin: 0; 
+            padding: 0; 
+        }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
-}
+        /* नेविगेशन बार शैलियाँ (Nav Bar Styles) */
+        .navbar {
+            background-color: #1e293b;
+            border-bottom: 2px solid #38bdf8;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #38bdf8;
+            text-decoration: none;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links li {
+            margin-left: 20px;
+        }
+        .nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: #38bdf8;
+            font-weight: bold;
+        }
 
-h1 {
-  font-size: 24px;
-}
+        /* मुख्य सामग्री (Main Content) */
+        .container { 
+            max-width: 1000px; 
+            margin: 40px auto; 
+            padding: 0 20px;
+        }
+        h1 { color: #38bdf8; text-align: center; }
+        .subtitle { text-align: center; color: #94a3b8; margin-bottom: 40px; }
+        
+        /* ग्रिड और कार्ड (Grid & Cards) */
+        .services-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 20px; 
+        }
+        .service-card { 
+            background: #1e293b; 
+            padding: 20px; 
+            border-radius: 8px; 
+            border: 1px solid #334155; 
+            transition: transform 0.3s, border-color 0.3s; 
+        }
+        .service-card:hover { 
+            transform: translateY(-5px); 
+            border-color: #38bdf8; 
+        }
+        .service-card h3 { color: #f43f5e; margin-top: 0; }
+        .service-card p { color: #cbd5e1; font-size: 14px; }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  
-}
-
-nav a {
-  text-decoration: none;
-  color: #ffffff;
-  
-}
-nav :hover{ color: blue;}
-  </style>
+        /* रिस्पॉन्सिव मोबाइल व्यू के लिए */
+        @media (max-width: 600px) {
+            .navbar { flex-direction: column; text-align: center; }
+            .nav-links { margin-top: 10px; }
+            .nav-links li { margin: 0 10px; }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="containera">
-        <h1>Welcome</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="welcome.html">Welcome</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="service.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="personalskil.html">personal skil</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-  <div class="container">
-    <div class="sidebar">
-      <h1>PORTFOLIO.</h1>
-    </div>
-    <div class="main-content">
-      <div class="image-container">
-        <img src="kunal pic.png" alt="Person looking at wall with designs">
-      </div>
-      <div class="text-content">
-        <h2>2025 Social Media Design</h2>
-        <h1>Brand Identity</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum leo tellus, 
-          eget blandit urna consequat sit amet. Aenean tincidunt lacus eget purus dictum, 
-          congue imperdiet neque eleifend. Duis nulla mauris, volutpat ut placerat.</p>
-        <div class="buttons">
-          <button><a href="index.html">See More My Portfolio</a></button>
-          <button><a href="contact.html">Contact Me!</a></button>
+
+    <!-- 🌐 नेविगेशन बार (Nav Bar) -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">🛡️ Cyber Xpert</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html" class="active">Services</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- 🎯 मुख्य सेवाएं -->
+    <div class="container">
+        <h1>🛡️ हमारी साइबर सुरक्षा सेवाएं (Our Cyber Security Services)</h1>
+        <p class="subtitle">भारतीय डिजिटल पारिस्थितिकी तंत्र को सुरक्षित और सुदृढ़ बनाने के लिए मेरी विशेषज्ञ सेवाएं।</p>
+
+        <div class="services-grid">
+
+            <!-- सेवा 1 -->
+            <div class="service-card">
+                <h3>1. सुरक्षित वातावरण स्थापना (Secure Lab Setup)</h3>
+                <p>कंपनियों और व्यक्तिगत उपयोगकर्ताओं के लिए बुनियादी साइबर सुरक्षा उपकरणों को कॉन्फ़िगर करना और खतरों से सुरक्षित एक डिजिटल वर्कस्पेस (Lab Environment) तैयार करना।</p>
+            </div>
+
+            <!-- सेवा 2 -->
+            <div class="service-card">
+                <h3>2. भेद्यता मूल्यांकन (Vulnerability Assessment)</h3>
+                <p>सिस्टम, नेटवर्क या वेबसाइट में सुरक्षा कमियों (Vulnerabilities) की पहचान करना, थ्रेट मॉडलिंग (Threat Modeling) करना और सुरक्षा को मजबूत करने के उपाय बताना।</p>
+            </div>
+
+            <!-- सेवा 3 -->
+            <div class="service-card">
+                <h3>3. डीपीडीपी अधिनियम और डेटा गोपनीयता अनुपालन</h3>
+                <p>भारत के नए **डिजिटल व्यक्तिगत डेटा संरक्षण (DPDP) अधिनियम** के तहत व्यवसायों को कानूनी रूप से अनुपालन (Compliance) करने और ग्राहकों के डेटा को सुरक्षित रखने में मदद करना।</p>
+            </div>
+
+            <!-- सेवा 4 -->
+            <div class="service-card">
+                <h3>4. डिजिटल जागरूकता और प्रशिक्षण (Cyber Awareness)</h3>
+                <p>कर्मचारियों और आम नागरिकों को ऑनलाइन वित्तीय धोखाधड़ी, फ़िशिंग (Phishing) और सोशल इंजीनियरिंग हमलों से बचाने के लिए प्रभावी जागरूकता अभियान और प्रशिक्षण कार्यक्रम आयोजित करना।</p>
+            </div>
+
+            <!-- सेवा 5 -->
+            <div class="service-card">
+                <h3>5. घटना प्रतिक्रिया योजना (Incident Response & Policy)</h3>
+                <p>साइबर हमले या डेटा लीक की स्थिति में नुकसान को कम करने के लिए त्वरित कार्रवाई योजना (Incident Response Policy) और सुरक्षा नियंत्रण ढांचा तैयार करना।</p>
+            </div>
+
+            <!-- सेवा 6 -->
+            <div class="service-card">
+                <h3>6. समग्र सुरक्षा ऑडिट (Cyber Security Audit)</h3>
+                <p>भारतीय डिजिटल पारिस्थितिकी तंत्र और व्यावसायिक आवश्यकताओं के अनुरूप एक व्यापक सुरक्षा स्थिति रिपोर्ट (Cyber Security Status Report) तैयार करना ताकि हर स्तर पर सुरक्षा सुनिश्चित हो सके।</p>
+            </div>
+
         </div>
-      </div>
     </div>
-  </div>
+
 </body>
 </html>
-
-        
